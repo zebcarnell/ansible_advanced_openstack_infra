@@ -1,22 +1,48 @@
 ---
-openstack_instances: 
-  - instance_name: app1
+# openstack_instances: 
+#   - instance_name: app1
+#     group: apps
+#     deployment: dev
+#     security_group_name: apps
+
+#   - instance_name: app2
+#     group: apps
+#     deployment: dev
+#     security_group_name: apps
+
+#   - instance_name: db
+#     group: appdbs
+#     deployment: dev
+#     security_group_name: db
+
+#   - instance_name: frontend
+#     group: frontends
+#     deployment: dev
+#     security_group_name: frontend
+
+__openstack_server:
+  app1:
+    instance_name: app1
+    group: apps
+    deployment: QA
+    security_group_name: apps
+
+  app2:
+    instance_name: app2
     group: apps
     deployment: dev
     security_group_name: apps
 
-  - instance_name: app2
-    group: apps
-    deployment: dev
-    security_group_name: apps
-
-  - instance_name: db
+  db:
+    instance_name: db
     group: appdbs
     deployment: dev
     security_group_name: db
 
-  - instance_name: frontend
+  frontend:
+    instance_name: frontend
     group: frontends
     deployment: dev
     security_group_name: frontend
+
 ...
