@@ -76,7 +76,7 @@ openstack_servers:
 
   - instance_name: app1
     group: app_servers
-    deployment: dev
+    deployment: QA
     security_group_name: apps
     image: "{{ _server_image | default('rhel-7.6') }}"
 
@@ -92,7 +92,7 @@ openstack_servers:
     security_group_name: db
     image: "{{ _server_image | default('rhel-7.6') }}"
 
-  - instance_name: frontend1
+  - instance_name: frontend
     group: load_balancers
     deployment: dev
     security_group_name: frontend

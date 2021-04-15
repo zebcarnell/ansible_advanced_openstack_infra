@@ -8,7 +8,7 @@
     key_name:         "{{ __openstack_server.key_name               | default('ansible_ssh_key') }}"
     wait:             "{{ __openstack_server.wait                   | default('yes') }}"
     security_groups:  "{{ __openstack_server.security_group_name }}"
-    delete_fip:       "{{__openstack_server.delete_fip              | default(true) }}"
+    delete_fip:       "{{ __openstack_server.delete_fip             | default(true) }}"
     meta: "group={{ __openstack_server.group }},deployment_name={{ __openstack_server.deployment }}"
     nics:
       - net-name: int_network
